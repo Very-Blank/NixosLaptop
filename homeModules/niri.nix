@@ -9,15 +9,14 @@
         };
       };
 
+      hotkey-overlay = {
+        skip-at-startup = true;
+      };
+
       cursor = {
         theme = "Bibata-Original-Classic";
         size = 16;
       };
-
-      spawn-at-startup = [
-        {command = ["nm-applet"];}
-        {command = ["blueman-applet"];}
-      ];
 
       screenshot-path = "~/Pictures/Screenshots/Screenshot%Y_%m_%d_%H_%M_%S.png";
 
