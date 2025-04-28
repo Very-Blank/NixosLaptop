@@ -7,12 +7,9 @@
     packages = [
       pkgs.firefox
       pkgs.cmake
-      pkgs.fuzzel
-      pkgs.ghostty
       pkgs.zig
       pkgs.git
       pkgs.bibata-cursors
-      pkgs.maven
       pkgs.maven
       pkgs.jdk23
       pkgs.rustc
@@ -56,12 +53,12 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "candy-icons";
-      package = pkgs.candy-icons;
+      name = "Papirus";
+      package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Nordic";
-      package = pkgs.nordic;
+      name = "Materia-dark";
+      package = pkgs.materia-theme;
     };
   };
 }

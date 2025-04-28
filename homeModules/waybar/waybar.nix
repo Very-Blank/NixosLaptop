@@ -111,10 +111,7 @@
 
         tray = {
           icon-size = 18;
-          spacing = 5;
-          icons = {
-              blueman = "bluetooth";
-          };
+          spacing = 10;
         };
       };
     };

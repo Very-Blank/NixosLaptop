@@ -92,16 +92,19 @@
     seatd
   ];
 
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    noto-fonts
-    noto-fonts-emoji
-    twemoji-color-font
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    (nerdfonts.override { fonts = [ "0xProto" ]; })
-  ];
+  fonts = {
+    packages = with pkgs; [
+      jetbrains-mono
+      noto-fonts
+      noto-fonts-emoji
+      twemoji-color-font
+      font-awesome
+      powerline-fonts
+      powerline-symbols
+      (nerdfonts.override { fonts = [ "0xProto" ]; })
+    ];
+  };
+
 
   system.stateVersion = "24.11";
 }

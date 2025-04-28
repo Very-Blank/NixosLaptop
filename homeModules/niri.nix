@@ -9,6 +9,11 @@
         };
       };
 
+      cursor = {
+        theme = "Bibata-Original-Classic";
+        size = 16;
+      };
+
       spawn-at-startup = [
         {command = ["nm-applet"];}
         {command = ["blueman-applet"];}
@@ -19,7 +24,7 @@
       prefer-no-csd = true;
 
       layout =  {
-        gaps = 4;
+        gaps = 8;
         center-focused-column = "never";
 
         preset-column-widths = [

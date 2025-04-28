@@ -6,9 +6,9 @@
     settings = {
       main = {
         "dpi-aware" = "no";
-        "icon-theme" = "candy-icons";
+        "icon-theme" = "Papirus";
         width = 40;
-        font = "Hack:weight=normal:size=14";
+        font = "0xProtoNerdFont:weight=normal:size=14";
         "line-height" = 15;
         "vertical-pad" = 8;
         "horizontal-pad" = 20;

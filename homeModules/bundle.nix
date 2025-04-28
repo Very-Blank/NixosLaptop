@@ -1,7 +1,6 @@
 {
   imports = [
     ./git.nix
-    ./qt.nix
     ./waybar/waybar.nix
     ./niri.nix
     ./zsh.nix
