@@ -1,4 +1,4 @@
-{...}:
+{nvim, ...}:
 
 {
   programs.neovim = {
@@ -6,10 +6,8 @@
     defaultEditor = true;
   };
 
-  home.file.".config/nvim".source = ./nvim;
-
-  # xdg.configFile."nvim" = {
-  #   enable = true;
-  #   # source = ./nvim;
-  # };
+  xdg.configFile."nvim" = {
+    enable = true;
+    source = nvim;
+  };
 }

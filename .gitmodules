@@ -1,3 +1,0 @@
-[submodule "homeModules/nvim/nvim"]
-	path = homeModules/nvim/nvim
-	url = https://github.com/Very-Blank/nvim.git

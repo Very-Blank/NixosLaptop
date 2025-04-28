@@ -10,10 +10,15 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+
+    nvim = {
+      url = "github:Very-Blank/nvim";
+      flake = false;
+    };
   };
 
   outputs = inputs: let
-    inherit (inputs) home-manager nixpkgs niri;
+    inherit (inputs) home-manager nixpkgs niri nvim;
     system = "x86_64-linux"; in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -32,7 +37,7 @@
         niri.homeModules.niri
       ];
 
-      extraSpecialArgs = { inherit inputs system; };
+      extraSpecialArgs = { inherit inputs system nvim; };
     };
   };
 }

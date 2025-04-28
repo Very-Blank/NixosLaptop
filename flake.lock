@@ -125,11 +125,28 @@
         "type": "github"
       }
     },
+    "nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743611941,
+        "narHash": "sha256-+PION9QqQQf0QrCfVUNYSFJZWqVirR035T3jA9m59Tc=",
+        "owner": "Very-Blank",
+        "repo": "nvim",
+        "rev": "29ef83ff8271b69fe4257c5b727f8e9406cc71f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Very-Blank",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "niri": "niri",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "nvim": "nvim"
       }
     },
     "xwayland-satellite-stable": {
