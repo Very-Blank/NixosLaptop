@@ -10,7 +10,6 @@
       pkgs.fuzzel
       pkgs.ghostty
       pkgs.zig
-      pkgs.neovim
       pkgs.git
       pkgs.bibata-cursors
       pkgs.maven
