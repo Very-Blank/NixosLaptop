@@ -6,8 +6,10 @@
     defaultEditor = true;
   };
 
-  xdg.configFile."nvim" = {
-    enable = true;
-    source = ./nvim;
-  };
+  home.file.".config/nvim".source = ./nvim;
+
+  # xdg.configFile."nvim" = {
+  #   enable = true;
+  #   # source = ./nvim;
+  # };
 }
