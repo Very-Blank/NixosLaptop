@@ -87,6 +87,16 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
+#custom-reboot {
+    padding-left: 14px;
+    margin-right: 8px;
+    padding-right: 18px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
 #custom-pacman {
     padding-left: 16px;
     padding-right: 8px;

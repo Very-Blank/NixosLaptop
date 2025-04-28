@@ -8,7 +8,7 @@
         margin = "5 10 5 10";
         modules-center = ["clock"];
 
-        modules-left = ["niri/workspaces" "niri/language" "keyboard-state" "custom/poweroff" "custom/hibernate"];
+        modules-left = ["niri/workspaces" "niri/language" "keyboard-state" "custom/poweroff" "custom/hibernate" "custom/reboot"];
         modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
 
         "niri/language" = {
@@ -31,13 +31,19 @@
 
         "custom/poweroff" = {
           format = "";
-          on-click = "poweroff";
+          on-double-click = "poweroff";
           tooltip = false;
         };
 
         "custom/hibernate" = {
           format = "⭘";
-          on-click = "systemctl hibernate";
+          on-double-click = "systemctl hibernate";
+          tooltip = false;
+        };
+
+        "custom/reboot" = {
+          format = "";
+          on-double-click = "reboot";
           tooltip = false;
         };
 
