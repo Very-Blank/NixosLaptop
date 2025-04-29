@@ -82,6 +82,15 @@
         {
           matches = [{ app-id = "^\\.blueman-manager-wrapped$"; }];
           open-floating = true;
+          max-width = 600;
+          min-width = 600;
+          max-height = 400;
+          min-height = 400;
+        }
+
+        {
+          matches = [{ app-id = "^nm-connection-editor$"; }];
+          open-floating = true;
         }
       ];
 
