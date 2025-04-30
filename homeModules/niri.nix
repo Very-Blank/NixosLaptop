@@ -1,4 +1,4 @@
-{config, niri, pkgs, ...}:
+{config, ...}:
 
 {
   programs.niri = {
@@ -21,6 +21,14 @@
       screenshot-path = "~/Pictures/Screenshots/Screenshot%Y_%m_%d_%H_%M_%S.png";
 
       prefer-no-csd = true;
+
+      spawn-at-startup = [
+        { command = ["xwayland-satellite"]; }
+      ];
+
+      environment = {
+          DISPLAY =  ":0";
+      };
 
       layout =  {
         gaps = 8;
@@ -75,8 +83,8 @@
         }
 
         {
-          matches = [{is-focused = false;}];
-          opacity = 0.70;
+          matches = [{ app-id = "^firefox$"; title = "^Picture-in-Picture$"; }];
+          open-floating = true;
         }
 
         {
@@ -135,9 +143,9 @@
         "Mod+Ctrl+9".action = move-column-to-workspace 9;
 
         "Mod+Minus".action = set-column-width "-10%";
-        "Mod+Plus".action = set-column-width "+10%";
+        "Mod+Equal".action = set-column-width "+10%";
         "Mod+Shift+Minus".action = set-window-height "-10%";
-        "Mod+Shift+Plus".action = set-window-height "+10%";
+        "Mod+Shift+Equal".action = set-window-height "+10%";
 
         "Mod+R".action = switch-preset-column-width;
         "Mod+F".action = maximize-column;

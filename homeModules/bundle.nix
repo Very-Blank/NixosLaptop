@@ -8,6 +8,7 @@
     ./fuzzel.nix
     ./swaybg/swaybg.nix
     ./ghostty.nix
+    ./firefox.nix
     ./nvim/nvim.nix
   ];
 }

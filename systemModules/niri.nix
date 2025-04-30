@@ -1,4 +1,4 @@
-{inputs, niri, pkgs, ...}:
+{inputs, pkgs, ...}:
 {
   nixpkgs.overlays = [inputs.niri.overlays.niri];
   programs.niri.package = pkgs.niri-unstable;
@@ -13,6 +13,8 @@
     };
 
     systemPackages = [
+      pkgs.xdg-desktop-portal
+      pkgs.xdg-desktop-portal-gnome
       pkgs.wtype
       pkgs.wl-clipboard
       pkgs.wayland-utils

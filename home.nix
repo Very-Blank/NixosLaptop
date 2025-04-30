@@ -1,20 +1,19 @@
-{inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home = {
     username = "blank";
     homeDirectory = "/home/blank";
     packages = [
-      pkgs.firefox
       pkgs.cmake
       pkgs.zig
       pkgs.git
       pkgs.bibata-cursors
-      pkgs.maven
-      pkgs.jdk23
       pkgs.rustc
       pkgs.cargo
       pkgs.gcc
+      pkgs.neofetch
+      pkgs.python3
     ];
 
     pointerCursor = {

@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
+{pkgs, ... }:
 
 {
   imports = [
@@ -71,37 +71,30 @@
     tuxedo-drivers.enable = true;
   };
 
-  # boot.kernelParams = [
-  #   "tuxedo_keyboard.mode=0"
-  #   "tuxedo_keyboard.brightness=25"
-  #   "tuxedo_keyboard.color_left=0x0000ff"
-  # ];
-
   users.users.blank = {
     isNormalUser = true;
     extraGroups = [ "wheel" "input" "bluetooth" "networkmanager" "video" ];
     shell = pkgs.zsh;
   };
 
-  environment.systemPackages = with pkgs; [
-    electron
-    home-manager
-    vim
-    wget
-    unzip
-    seatd
+  environment.systemPackages = [
+    pkgs.home-manager
+    pkgs.vim
+    pkgs.wget
+    pkgs.unzip
+    pkgs.seatd
   ];
 
   fonts = {
-    packages = with pkgs; [
-      jetbrains-mono
-      noto-fonts
-      noto-fonts-emoji
-      twemoji-color-font
-      font-awesome
-      powerline-fonts
-      powerline-symbols
-      (nerdfonts.override { fonts = [ "0xProto" ]; })
+    packages = [
+      pkgs.jetbrains-mono
+      pkgs.noto-fonts
+      pkgs.noto-fonts-emoji
+      pkgs.twemoji-color-font
+      pkgs.font-awesome
+      pkgs.powerline-fonts
+      pkgs.powerline-symbols
+      (pkgs.nerdfonts.override { fonts = [ "0xProto" ]; })
     ];
   };
 
